@@ -38,6 +38,19 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         playButtonPressed.isHidden = true
         resultTextView.isHidden = true
+        
+        userImageView.image = UIImage(named: "question.png")
+        machineImageView.image = UIImage(named: "question.png")
+        userPointsTextView.text = "0"
+        machinePointsTextView.text = "0"
+        machinePoints = 0
+        userPoints = 0
+        machineIndex = 0
+        userIndex = 0
+        winText = "USER WIN!"
+        
+        
+       
     }
 
 
@@ -120,5 +133,15 @@ class ViewController: UIViewController {
         resultTextView.isHidden = false
         
     }
+    
+    @IBAction func exitButtonPressed(_ sender: UIButton) {
+        exit(0)
+    }
+    
+    
+    @IBAction func resetButtonPressed(_ sender: UIButton) {
+        viewDidLoad()
+    }
+    
 }
 
