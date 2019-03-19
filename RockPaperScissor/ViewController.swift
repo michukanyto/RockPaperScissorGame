@@ -42,14 +42,14 @@ class ViewController: UIViewController {
 
 
     @IBAction func rockButtonPressed(_ sender: UIButton) {
-        userIndex = 1
+        userIndex = 0
         userImageView.image = imageGame[userIndex]
         playButtonPressed.isHidden = false
     }
     
     
     @IBAction func paperButonPressed(_ sender: UIButton) {
-        userIndex = 0
+        userIndex = 1
         userImageView.image = imageGame[userIndex]
         playButtonPressed.isHidden = false
     }
@@ -84,26 +84,6 @@ class ViewController: UIViewController {
     }
     
     func checkWinner(){
-//        if(machineIndex == userIndex){
-//            print("It's a TIE")
-//            resultTextView.text = "It's a TIE"
-//        }else if(machineIndex > userIndex){
-//            if(userIndex != 0){
-//                machineIndex += 1
-//                print("\(machineIndex)")
-//                resultTextView.text = "Machine Win"
-//            }else{
-//                userIndex += 1
-//                print("\(machineIndex)")
-//                resultTextView.text = "User Win"
-//            }
-//
-//
-//        }else{
-//            userPoints += 1
-//            print("\(userIndex)")
-//            resultTextView.text = "User Win"
-//        }
         if(machineIndex == userIndex){
             winText = "IT'S A TIE!"
         }else{
