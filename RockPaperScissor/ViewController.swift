@@ -36,9 +36,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        initialize()
+
+    }
+    
+    func initialize(){
         playButtonPressed.isHidden = true
         resultTextView.isHidden = true
-        
         userImageView.image = UIImage(named: "question.png")
         machineImageView.image = UIImage(named: "question.png")
         userPointsTextView.text = "0"
@@ -48,9 +52,6 @@ class ViewController: UIViewController {
         machineIndex = 0
         userIndex = 0
         winText = "USER WIN!"
-        
-        
-       
     }
 
 
@@ -140,7 +141,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func resetButtonPressed(_ sender: UIButton) {
-        viewDidLoad()
+        initialize()
     }
     
 }
